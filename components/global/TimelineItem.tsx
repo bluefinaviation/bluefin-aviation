@@ -1,4 +1,4 @@
-import ImageBox from '@/components/global/ImageCustom';
+import { ImageCustom } from '@/components/global/ImageCustom';
 import type { MilestoneItem } from '@/types/sanity';
 
 export function TimelineItem({
@@ -22,10 +22,10 @@ export function TimelineItem({
           className="relative overflow-hidden rounded-md bg-black"
           style={{ width: '65px', height: '65px' }}
         >
-          <ImageBox
+          <ImageCustom
             image={image}
             alt={title || 'Timeline item icon'}
-            size="10vw"
+            // size="10vw"
             width={65}
             height={65}
           />

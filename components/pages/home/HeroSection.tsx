@@ -25,10 +25,10 @@ export const HeroSection = ({ heroSection }) => {
 
   return (
     <>
-      <div className="grid h-[calc(100vh-6rem)] items-center justify-center overflow-hidden">
+      <div className="grid h-screen items-center justify-center overflow-hidden">
         <Container>
           <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
-            <div className="relative z-10 mx-auto max-w-2xl sm:max-w-none lg:col-span-7 lg:pt-6 xl:col-span-6">
+            <div className="relative z-10 mx-auto mt-6 max-w-2xl sm:mt-0 sm:max-w-none lg:col-span-7 lg:pt-6 xl:col-span-6">
               <PageTitle>{heroSection.section.heading}</PageTitle>
               <PageSummary>
                 <PortableText value={heroSection.section.summary} />

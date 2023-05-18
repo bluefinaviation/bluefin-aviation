@@ -30,6 +30,7 @@ export const Slider = ({ gallery }) => {
   useEffect(() => {
     if (!embla) return;
     onSelect();
+    // @ts-expect-error xxx
     setScrollSnaps(embla.scrollSnapList());
     embla.on('select', onSelect);
   }, [embla, setScrollSnaps, onSelect]);
@@ -44,7 +45,8 @@ export const Slider = ({ gallery }) => {
                 <Image
                   src={
                     mediaByIndex(index).asset?._ref
-                      ? urlForImage(mediaByIndex(index))
+                      ? // @ts-expect-error xxx
+                        urlForImage(mediaByIndex(index))
                           .width(1600)
                           .height(1200)
                           .fit('crop')

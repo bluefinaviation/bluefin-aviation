@@ -1,6 +1,7 @@
 import type { PortableTextBlock } from '@portabletext/types';
+
 import { CustomPortableText } from '@/components/global/CustomPortableText';
-import ImageBox from '@/components/global/ImageCustom';
+import { ImageCustom } from '@/components/global/ImageCustom';
 import type { ShowcaseProject } from '@/types/sanity';
 
 interface ProjectProps {
@@ -18,10 +19,10 @@ export function ProjectListItem(props: ProjectProps) {
       }`}
     >
       <div className="w-full xl:w-9/12">
-        <ImageBox
+        <ImageCustom
           image={project.coverImage}
           alt={`Cover image from ${project.title}`}
-          classesWrapper="relative aspect-[16/9]"
+          className="relative aspect-[16/9]"
         />
       </div>
       <div className="flex xl:w-1/4">

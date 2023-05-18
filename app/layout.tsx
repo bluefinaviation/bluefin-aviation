@@ -1,7 +1,8 @@
-import './tailwind.css';
+import '@/styles/globals.css';
 
 // import type { PortableTextBlock } from '@portabletext/types';
 import { Inter } from 'next/font/google';
+import { ReactNode } from 'react';
 
 // import { Footer } from '@/components/global/Footer';
 // import { Navbar } from '@/components/global/Navbar';
@@ -11,13 +12,13 @@ import { Inter } from 'next/font/google';
 const inter = Inter({
   display: 'swap',
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-sans',
 });
 
 export default async function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   // const token = getPreviewToken();
   // const settings = (await getSettings({ token })) || {

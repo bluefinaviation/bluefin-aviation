@@ -48,7 +48,8 @@ export const PartnersSection = ({ partnersSection }) => {
               <Image
                 src={
                   partner?.logo?.asset?._ref
-                    ? urlForImage(partner.logo)
+                    ? // @ts-expect-error xxx
+                      urlForImage(partner.logo)
                         .height(720)
                         .width(1200)
                         .fit('crop')

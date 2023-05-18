@@ -50,11 +50,11 @@ import { NavLinks } from '@/components/navigation/NavLinks';
 import { navLinks } from '@/data/navLinks';
 
 export const Navbar = () => {
-  const [isInquiryOpen, setIsInquiryOpen] = useState(false);
+  // const [isInquiryOpen, setIsInquiryOpen] = useState(false);
 
-  const closeInquiry = () => {
-    setIsInquiryOpen(false);
-  };
+  // const closeInquiry = () => {
+  //   setIsInquiryOpen(false);
+  // };
 
   return (
     <>
@@ -132,10 +132,10 @@ export const Navbar = () => {
             </div>
           </Container>
         </nav>
-        <InquirySlideOver
+        {/* <InquirySlideOver
           closeInquiry={closeInquiry}
           isInquiryOpen={isInquiryOpen}
-        />
+        /> */}
       </header>
     </>
   );

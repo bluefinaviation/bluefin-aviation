@@ -11,6 +11,7 @@ interface IProps {
   type?: 'submit' | 'reset' | 'button';
   onClick?: React.MouseEventHandler;
   props?: any;
+  disabled?: boolean;
 }
 
 const baseStyles = {

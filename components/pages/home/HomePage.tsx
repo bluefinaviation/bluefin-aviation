@@ -1,7 +1,6 @@
 import { PageContainer } from '@/components/global/PageContainer';
 import { ContactSection } from '@/components/pages/home/ContactSection';
 import { HeroSection } from '@/components/pages/home/HeroSection';
-import { NewsletterSection } from '@/components/pages/home/NewsletterSection';
 import { PartnersSection } from '@/components/pages/home/PartnersSection';
 import { ServicesSection } from '@/components/pages/home/ServicesSection';
 import { TestimonialsSection } from '@/components/pages/home/TestimonialsSection';

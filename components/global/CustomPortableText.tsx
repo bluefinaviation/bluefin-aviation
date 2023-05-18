@@ -2,7 +2,7 @@ import { PortableText, PortableTextComponents } from '@portabletext/react';
 import type { PortableTextBlock } from '@portabletext/types';
 import { Image } from 'sanity';
 
-import { ImageBox } from '@/components/global/ImageCustom';
+import { ImageCustom } from '@/components/global/ImageCustom';
 import { TimelineSection } from '@/components/global/TimelineSection';
 
 export function CustomPortableText({
@@ -39,10 +39,10 @@ export function CustomPortableText({
       }) => {
         return (
           <div className="my-6 space-y-2">
-            <ImageBox
+            <ImageCustom
               image={value}
               alt={value.alt}
-              classesWrapper="relative aspect-[16/9]"
+              className="relative aspect-[16/9]"
             />
             {value?.caption && (
               <div className="font-sans text-sm text-gray-600">

@@ -13,7 +13,8 @@ export const HeroSection = ({ hero }) => {
         <Image
           src={
             hero?.image?.asset?._ref
-              ? urlForImage(hero.image)
+              ? // @ts-expect-error xxx
+                urlForImage(hero.image)
                   .width(1920)
                   .height(1080)
                   .fit('crop')
@@ -27,7 +28,8 @@ export const HeroSection = ({ hero }) => {
         <Image
           src={
             hero?.image?.asset?._ref
-              ? urlForImage(hero.image)
+              ? // @ts-expect-error xxx
+                urlForImage(hero.image)
                   .width(1440)
                   .height(1920)
                   .fit('crop')

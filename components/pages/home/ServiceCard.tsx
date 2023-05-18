@@ -20,14 +20,12 @@ export const ServiceCard = ({
   className,
 }: IProps) => {
   return (
-    <Link
-      href={slug}
-      className={clsx('group relative h-[50vh] lg:h-screen', className)}
-    >
+    <Link href={slug} className={clsx('group relative h-screen', className)}>
       <Image
         src={
           image?.asset?._ref
-            ? urlForImage(image).width(1200).height(1600).fit('crop').url()
+            ? // @ts-expect-error image can be undefined
+              urlForImage(image).width(1200).height(1600).fit('crop').url()
             : 'https://source.unsplash.com/1080x1080/?plane'
         }
         alt={image?.alt ? image.alt : ''}
@@ -36,7 +34,7 @@ export const ServiceCard = ({
         className="h-full bg-gray-800 object-cover object-center"
       />
       <div className="tw-transition absolute inset-0 bg-black opacity-30 group-hover:opacity-0" />
-      <div className="absolute left-5 bottom-5 z-10 sm:left-10 sm:bottom-10">
+      <div className="absolute bottom-5 left-5 z-10 sm:bottom-10 sm:left-10">
         <p className="text-base font-medium text-gray-200 sm:text-lg lg:text-xl">
           {tagline}
         </p>
